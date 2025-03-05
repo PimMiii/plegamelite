@@ -10,11 +10,21 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
-run/main_scene="res://test_1.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/name="PLE GameLite"
+run/main_scene="uid://b7i5p12y5q27d"
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+mouse_cursor/custom_image="uid://fw8pqhxj56kt"
 
 [dotnet]
 
-project/assembly_name="New Game Project"
+project/assembly_name="PLE GameLite"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
