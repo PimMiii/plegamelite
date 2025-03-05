@@ -1,12 +1,16 @@
-# plegamelite
+# PLE 2024-2025
 
-Reverse Roguelite for PLE
+## PLE Gamelite
 
-## Assets in use
+A reverse roguelite where the player grows weaker as they try to reach the end.
 
-##### \* crossed out packs havee been downloaded but no asset from the pack is used.
+Starting out with a fully randomized build, and losing skills as you progress through floors. What can you shed while still beating a run?
 
-### Kenney
+### Assets in use
+
+###### \* crossed out packs havee been downloaded but no asset from the pack is used.
+
+#### Kenney
 
 Download at: [Kenney.nl](https://kenney.nl/assets/category:2D?search=&sort=name).
 
