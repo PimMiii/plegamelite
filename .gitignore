@@ -21,3 +21,4 @@ mono_crash.*.json
 /resources/brackeys_platformer_assets
 
 /.vscode
+.vscode/launch.json
