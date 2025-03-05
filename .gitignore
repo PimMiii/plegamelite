@@ -19,3 +19,4 @@ mono_crash.*.json
 # download .7z from drive or download KenneyNL packs as stated in README.md
 /resources/assets/kenneynl
 /resources/brackeys_platformer_assets
+.vscode/
