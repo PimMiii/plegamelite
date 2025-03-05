@@ -20,4 +20,4 @@ mono_crash.*.json
 /resources/assets/kenneynl
 /resources/brackeys_platformer_assets
 
-/vscode/
+/.vscode
