@@ -25,6 +25,23 @@ mouse_cursor/custom_image="uid://fw8pqhxj56kt"
 
 project/assembly_name="PLE GameLite"
 
+[file_customization]
+
+folder_colors={
+"res://resources/assets/": "purple",
+"res://resources/brackeys_platformer_assets/": "yellow",
+"res://resources/scenes/": "orange",
+"res://resources/scripts/": "red"
+}
+
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="player"
+2d_physics/layer_3="enemy"
+2d_physics/layer_4="pickups"
+2d_physics/layer_5="interactions"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
