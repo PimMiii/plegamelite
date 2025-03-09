@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://bs2hrs6gxbo1y"]
+
+[ext_resource type="Texture2D" uid="uid://46uc57i23tv0" path="res://resources/brackeys_platformer_assets/sprites/slime_green.png" id="1_mu7tm"]
+[ext_resource type="Script" uid="uid://dovo3m2g4m3jx" path="res://resources/scripts/enemies/Slime.cs" id="1_tloy0"]
+[ext_resource type="PackedScene" uid="uid://sjufqek2qu4s" path="res://resources/scenes/objects/killzone.tscn" id="2_ybv0b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybv0b"]
+atlas = ExtResource("1_mu7tm")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ub3dy"]
+atlas = ExtResource("1_mu7tm")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aky6o"]
+atlas = ExtResource("1_mu7tm")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3yda"]
+atlas = ExtResource("1_mu7tm")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gdwvo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybv0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ub3dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aky6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3yda")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ub3dy"]
+size = Vector2(10, 14)
+
+[node name="Slime" type="Node2D"]
+script = ExtResource("1_tloy0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_gdwvo")
+animation = &"moving"
+autoplay = "moving"
+frame_progress = 0.62904
+
+[node name="Killzone" parent="." instance=ExtResource("2_ybv0b")]
+
+[node name="CollisionShape2D" parent="Killzone" index="0"]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_ub3dy")
+
+[node name="Raycasts" type="Node" parent="."]
+
+[node name="RayCastRight" type="RayCast2D" parent="Raycasts"]
+position = Vector2(0, -6)
+target_position = Vector2(9, 0)
+collide_with_areas = true
+
+[node name="RayCastLeft" type="RayCast2D" parent="Raycasts"]
+position = Vector2(0, -6)
+target_position = Vector2(-9, 0)
+collide_with_areas = true
+
+[editable path="Killzone"]
