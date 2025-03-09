@@ -272,6 +272,11 @@ zoom = Vector2(4, 4)
 limit_bottom = 120
 position_smoothing_enabled = true
 
+[node name="Pickups" type="Node" parent="."]
+
+[node name="Coin" parent="Pickups" instance=ExtResource("4_eo0ot")]
+position = Vector2(215, -68)
+
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Slime" parent="Enemies" instance=ExtResource("6_gcd3b")]
@@ -285,8 +290,3 @@ startingDirection = 0
 [node name="Slime3" parent="Enemies" instance=ExtResource("6_gcd3b")]
 position = Vector2(1208, -80)
 startingDirection = 0
-
-[node name="Pickups" type="Node" parent="."]
-
-[node name="Coin" parent="Pickups" instance=ExtResource("4_eo0ot")]
-position = Vector2(215, -68)

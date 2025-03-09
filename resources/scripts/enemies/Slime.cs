@@ -29,7 +29,7 @@ public partial class Slime : Node2D
 		// check directional collision
 		if (_raycastRight.IsColliding())
 		{
-			GD.Print("Collision to the Right", this);
+			GD.Print("Collision to the Right", this.Name);
 			_animatedSprite.FlipH = true;
 			_direction = -1;
 		}
