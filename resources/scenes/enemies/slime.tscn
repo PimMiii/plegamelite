@@ -54,14 +54,12 @@ autoplay = "moving"
 frame_progress = 0.62904
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(1, -6)
 target_position = Vector2(9, 0)
-collision_mask = 3
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(1, -6)
 target_position = Vector2(-9, 0)
-collision_mask = 3
 
 [node name="Killzone" parent="." instance=ExtResource("2_ybv0b")]
 
