@@ -3,20 +3,22 @@ using System;
 using System.Net;
 public partial class Slime : Node2D
 {
+	// references
+	private RayCast2D _raycastRight;
+	private RayCast2D _raycastLeft;
+	private AnimatedSprite2D _animatedSprite;
+
+
 	[Export(PropertyHint.Range, "0,100,1")]
 	public float speed = 60f;
 	private int _direction = 1;
 	[Export(PropertyHint.Enum, "Left,Right")]
 	private int startingDirection = 1;
 
-	private RayCast2D _raycastRight;
-	private RayCast2D _raycastLeft;
-	private AnimatedSprite2D _animatedSprite;
-
 	public override void _Ready()
 	{
-		_raycastRight = GetNode<RayCast2D>("Raycasts/RayCastRight");
-		_raycastLeft = GetNode<RayCast2D>("Raycasts/RayCastLeft");
+		_raycastRight = GetNode<RayCast2D>("RayCastRight");
+		_raycastLeft = GetNode<RayCast2D>("RayCastLeft");
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 
 		_direction = startingDirection == 0 ? -1 : 1;

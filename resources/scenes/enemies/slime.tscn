@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bs2hrs6gxbo1y"]
 
-[ext_resource type="Texture2D" uid="uid://46uc57i23tv0" path="res://resources/brackeys_platformer_assets/sprites/slime_green.png" id="1_mu7tm"]
+[ext_resource type="Texture2D" uid="uid://u67hqviyp1ec" path="res://resources/brackeys_platformer_assets/sprites/slime_green.png" id="1_mu7tm"]
 [ext_resource type="Script" uid="uid://dovo3m2g4m3jx" path="res://resources/scripts/enemies/Slime.cs" id="1_tloy0"]
 [ext_resource type="PackedScene" uid="uid://sjufqek2qu4s" path="res://resources/scenes/objects/killzone.tscn" id="2_ybv0b"]
 
@@ -53,22 +53,20 @@ animation = &"moving"
 autoplay = "moving"
 frame_progress = 0.62904
 
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(9, 0)
+collision_mask = 3
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(-9, 0)
+collision_mask = 3
+
 [node name="Killzone" parent="." instance=ExtResource("2_ybv0b")]
 
 [node name="CollisionShape2D" parent="Killzone" index="0"]
 position = Vector2(0, -7)
 shape = SubResource("RectangleShape2D_ub3dy")
-
-[node name="Raycasts" type="Node" parent="."]
-
-[node name="RayCastRight" type="RayCast2D" parent="Raycasts"]
-position = Vector2(0, -6)
-target_position = Vector2(9, 0)
-collision_mask = 3
-
-[node name="RayCastLeft" type="RayCast2D" parent="Raycasts"]
-position = Vector2(0, -6)
-target_position = Vector2(-9, 0)
-collision_mask = 3
 
 [editable path="Killzone"]
